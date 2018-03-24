@@ -1,0 +1,25 @@
+
+extends partials/index.pug
+
+block head
+  // link(rel = 'stylesheet' href = 'css/template.css')
+  // script(src = 'js/tempalte.js')
+
+block header
+  section.container
+    header.jumbatron
+      // img(src = 'img/webgl-operate-logo.svg' alt = 'webgl-operate logo').mb-2.w-50.d-none.d-md-block
+      // img(src = 'img/webgl-operate-logo.svg' alt = 'webgl-operate logo').mb-2.d-block.d-md-none
+      h1.display-4 Website Template Header
+      p.lead webgl-operate (or gloperate for WebGL) is a TypeScript based WebGL rendering framework.
+
+block content
+  section.container
+    h4 Pug Content
+    p Pug-based template for various open-source project websites of CG Internals.
+
+    include partials/code.pug
+    +code('npm', 'npm install --save-dev cginternals-website-template', 'This template can be installed via npm:')
+
+    h4 Markdown Content
+    include:markdown-it README.md

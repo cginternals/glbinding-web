@@ -1,0 +1,20 @@
+
+doctype html
+html(lang = 'en')
+
+  block vars
+    - var navLinks = []
+    - navLinks.push({ href: '/', text: 'Template' })
+    - navLinks.push({ href: 'https://github.com/cginternals', text: 'GitHub' })
+    - navLinks.push({ href: 'https://webgl-operate.org', text: 'Example' })
+
+  include head.pug
+  body.bg-light
+  
+    include navbar.pug
+
+    block header
+
+    block content
+
+    include foot.pug
