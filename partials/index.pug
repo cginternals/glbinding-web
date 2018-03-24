@@ -3,10 +3,11 @@ doctype html
 html(lang = 'en')
 
   block vars
-    - var navLinks = []
-    - navLinks.push({ href: '/', text: 'Template' })
-    - navLinks.push({ href: 'https://github.com/cginternals', text: 'GitHub' })
-    - navLinks.push({ href: 'https://webgl-operate.org', text: 'Example' })
+  - var navLinks = []
+  - navLinks.push({ href: '/', text: 'glbinding' })
+  - navLinks.push({ href: '/docs.html', text: 'Documentation' })
+  - navLinks.push({ href: 'https://github.com/cginternals/glbinding/wiki', text: 'Wiki' })
+  - navLinks.push({ href: 'https://github.com/cginternals/glbinding', text: 'GitHub' })
 
   include head.pug
   body.bg-light

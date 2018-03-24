@@ -1,0 +1,12 @@
+
+extends ../partials/index.pug
+
+block head
+  // link(rel = 'stylesheet' href = 'css/template.css')
+  // script(src = 'js/tempalte.js')
+
+block content
+  section.container
+    div.row
+      div.col
+        include:markdown-it(html=true) integration-guide.md

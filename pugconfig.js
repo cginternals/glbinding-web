@@ -14,10 +14,11 @@ const copy = require('./copy.js');
 const websiteDir = '.';
 const distDir = './_site';
 
-const entries = ['index.pug'];
+const entries = ['index.pug', 'docs/docs.pug', 'docs/integration-guide.pug'];
 
 const assets = [
-    [websiteDir, distDir, ['css/*.css', 'js/*.js', 'img/*.{svg,png}', 'fonts/*', '*.{svg,png,ico,xml,json}'], ["package.json", "package-lock.json"], false]
+    [websiteDir, distDir, ['css/*.css', 'js/*.js', 'img/*.{svg,png}', 'fonts/*', '*.{svg,png,ico,xml,json}'], ["package.json", "package-lock.json"], false],
+    [websiteDir + '/docs', distDir + '/docs', ['*/*'], [""], true]
 ];
 
 var build_pending = false;

@@ -1,0 +1,42 @@
+
+extends ../partials/index.pug
+
+block vars
+  - var documentations = []
+  - documentations.push({ name: 'master', status: 'unstable', date: '05.04.2017', bootstrapClass: 'warning' })
+  - documentations.push({ name: 'v2.1', status: 'latest stable', date: '0', bootstrapClass: 'success' })
+  - documentations.push({ name: 'v2.0', status: 'stable', date: '0', bootstrapClass: 'primary' })
+  - documentations.push({ name: 'v1.1', status: 'stable', date: '0', bootstrapClass: 'primary' })
+  - documentations.push({ name: 'v1.0', status: 'stable', date: '0', bootstrapClass: 'primary' })
+
+block head
+  // link(rel = 'stylesheet' href = 'css/template.css')
+  // script(src = 'js/tempalte.js')
+
+block content
+  section.
+  section.container
+    div.row
+      div.col
+        include:markdown-it(html=true) docs.md
+
+  section.container
+    h2 Available Documentations
+
+  section.container
+    div.row
+      each doc in documentations
+        div.col-lg-3.col-md-4.col-sm-6.mb-4
+          div.card(class='border-' + doc.bootstrapClass)
+            div.card-body(class='text-' + doc.bootstrapClass)
+              div.card-title
+                a.nav-link.active(href='/docs/' + doc.name)
+                  div.card-block.text-center
+                    div.pull-left
+                      span.h2= doc.name
+                    div.pull-right
+                      span.badge(class='badge-' + doc.bootstrapClass)= doc.status
+        
+  section.container
+    h2 Technical integration guide
+    p If you want to add a new or updated documentation for a specific release of glbinding, please refer to the #[a(href='/integration-guide.html') integration guide].

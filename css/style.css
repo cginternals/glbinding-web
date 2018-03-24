@@ -136,3 +136,7 @@ canvas:-webkit-full-screen {
     margin: 0;
     padding: 0;
 }
+
+img[alt=what-is-glbinding] {
+    width: 100%;
+}
