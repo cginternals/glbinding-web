@@ -8,8 +8,8 @@ const watch = process.argv.indexOf('--watch') > 1;
 
 const fs   = require('fs');
 const path = require('path');
-const pug  = require('pug');
 const copy = require('./copy.js');
+const pug  = require('pug');
 
 const websiteDir = '.';
 const distDir = './_site';

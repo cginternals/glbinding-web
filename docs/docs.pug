@@ -18,7 +18,7 @@ block content
   section.container
     div.row
       div.col
-        include:markdown-it(html=true) docs.md
+        include:markdown-it(html plugins=['markdown-it-highlightjs']) docs.md
 
   section.container
     h2 Available Documentations
