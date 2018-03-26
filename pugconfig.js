@@ -6,10 +6,10 @@
 
 const watch = process.argv.indexOf('--watch') > 1;
 
-const fs   = require('fs');
+const fs = require('fs');
 const path = require('path');
 const copy = require('./copy.js');
-const pug  = require('pug');
+const pug = require('pug');
 
 const websiteDir = '.';
 const distDir = './_site';
@@ -18,7 +18,7 @@ const entries = ['index.pug', 'docs/docs.pug', 'docs/integration-guide.pug'];
 
 const assets = [
     [websiteDir, distDir, ['css/*.css', 'js/*.js', 'img/*.{svg,png}', 'fonts/*', '*.{svg,png,ico,xml,json}'], ["package.json", "package-lock.json"], false],
-    [websiteDir + '/docs', distDir + '/docs', ['*/*'], [""], true]
+    [websiteDir + '/docs', distDir + '/docs', ['*/*'], [""], false]
 ];
 
 var build_pending = false;

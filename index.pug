@@ -1,8 +1,19 @@
 extends partials/index.pug
 
+
+block vars
+  - var navActive = 0 
+
 block head
   // link(rel = 'stylesheet' href = 'css/template.css')
   // script(src = 'js/tempalte.js')
+
+block header
+  section.container
+    header.jumbatron
+      img(src = 'img/glbinding-logo.svg' alt = 'glbinding logo').mb-2.w-50.d-none.d-md-block
+      img(src = 'img/glbinding-logo.svg' alt = 'glbinding logo').mb-2.d-block.d-md-none
+      p.lead A C++ binding for the OpenGL API, generated using the gl.xml specification.
 
 block content
   section.container

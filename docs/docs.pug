@@ -1,42 +1,47 @@
 
 extends ../partials/index.pug
 
+
 block vars
   - var documentations = []
-  - documentations.push({ name: 'master', status: 'unstable', date: '05.04.2017', bootstrapClass: 'warning' })
   - documentations.push({ name: 'v2.1', status: 'latest stable', date: '0', bootstrapClass: 'success' })
   - documentations.push({ name: 'v2.0', status: 'stable', date: '0', bootstrapClass: 'primary' })
   - documentations.push({ name: 'v1.1', status: 'stable', date: '0', bootstrapClass: 'primary' })
   - documentations.push({ name: 'v1.0', status: 'stable', date: '0', bootstrapClass: 'primary' })
+  - documentations.push({ name: 'master', status: 'unstable', date: '05.04.2017', bootstrapClass: 'warning' })
+  - var navActive = 1
 
 block head
   // link(rel = 'stylesheet' href = 'css/template.css')
   // script(src = 'js/tempalte.js')
 
+block header
+  section.container
+    header.jumbatron
+      img(src = 'img/glbinding-logo.svg' alt = 'glbinding logo').mb-2.w-50.d-none.d-md-block
+      img(src = 'img/glbinding-logo.svg' alt = 'glbinding logo').mb-2.d-block.d-md-none
+      p.lead A C++ binding for the OpenGL API, generated using the gl.xml specification.
+
 block content
-  section.
+
+  section.container
+    div.row
+      div.col 
+        h2.mb-4 Available Documentations
+
+        div.card-columns
+          each doc in documentations
+            div.card(class='border-' + doc.bootstrapClass)
+              div.card-body(class='text-' + doc.bootstrapClass)
+                div.card-title
+                  a.nav-link.active(href='/docs/' + doc.name)
+                    div.card-block.text-center
+                      div.pull-left
+                        span.h2= doc.name
+                      div.pull-right
+                        span.badge(class='badge-' + doc.bootstrapClass)= doc.status
+        
   section.container
     div.row
       div.col
-        include:markdown-it(html plugins=['markdown-it-highlightjs']) docs.md
-
-  section.container
-    h2 Available Documentations
-
-  section.container
-    div.row
-      each doc in documentations
-        div.col-lg-3.col-md-4.col-sm-6.mb-4
-          div.card(class='border-' + doc.bootstrapClass)
-            div.card-body(class='text-' + doc.bootstrapClass)
-              div.card-title
-                a.nav-link.active(href='/docs/' + doc.name)
-                  div.card-block.text-center
-                    div.pull-left
-                      span.h2= doc.name
-                    div.pull-right
-                      span.badge(class='badge-' + doc.bootstrapClass)= doc.status
-        
-  section.container
-    h2 Technical integration guide
-    p If you want to add a new or updated documentation for a specific release of glbinding, please refer to the #[a(href='/integration-guide.html') integration guide].
+        include:markdown-it(html plugins=['markdown-it-highlightjs']) integration-guide.md
