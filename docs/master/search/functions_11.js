@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['unresolved',['unresolved',['../classglbinding_1_1_abstract_function.html#ab2a1991a7a8ecbcef12442c51f3d391f',1,'glbinding::AbstractFunction']]],
-  ['unresolvedcallback',['unresolvedCallback',['../namespaceglbinding.html#a3a61404565a79bb9bfc99f6d4ab4242b',1,'glbinding']]],
-  ['usecontext',['useContext',['../classglbinding_1_1_binding.html#ae4b174fb9cfc7047469d8211033adbec',1,'glbinding::Binding']]],
-  ['usecurrentcontext',['useCurrentContext',['../classglbinding_1_1_binding.html#ac12e6a05697aeb3f094c604ba51ca09b',1,'glbinding::Binding']]]
+  ['_7eabstractfunction',['~AbstractFunction',['../classglbinding_1_1_abstract_function.html#aedf53d008131ce0303385f567b831c97',1,'glbinding::AbstractFunction']]],
+  ['_7eabstractstate',['~AbstractState',['../classglbinding_1_1_abstract_state.html#add5f7b38adb07e82f2641ec75b2ce64e',1,'glbinding::AbstractState']]],
+  ['_7eabstractvalue',['~AbstractValue',['../classglbinding_1_1_abstract_value.html#a9250b77c8ee79a495bb916de4cef43e2',1,'glbinding::AbstractValue']]],
+  ['_7efunctioncall',['~FunctionCall',['../classglbinding_1_1_function_call.html#aa80fcde69e7e40e38ace65d37fd49fb5',1,'glbinding::FunctionCall']]]
 ];

@@ -6,6 +6,8 @@ var searchData=
   ['edgeflagpointerext',['EdgeFlagPointerEXT',['../classglbinding_1_1_binding.html#ae5b8211f030f70a1f273a19cf3936140',1,'glbinding::Binding']]],
   ['edgeflagpointerlistibm',['EdgeFlagPointerListIBM',['../classglbinding_1_1_binding.html#a99b2fc28be25e3a5c0a61751b9dbd7c2',1,'glbinding::Binding']]],
   ['edgeflagv',['EdgeFlagv',['../classglbinding_1_1_binding.html#a97828f9da7bc939e6cae6f91957f6db7',1,'glbinding::Binding']]],
+  ['eglimagetargettexstorageext',['EGLImageTargetTexStorageEXT',['../classglbinding_1_1_binding.html#a2b535cab2dcd337b411e57cb42aa002f',1,'glbinding::Binding']]],
+  ['eglimagetargettexturestorageext',['EGLImageTargetTextureStorageEXT',['../classglbinding_1_1_binding.html#ac2de93218b2dd552fcdfae4cc1a89186',1,'glbinding::Binding']]],
   ['elementpointerapple',['ElementPointerAPPLE',['../classglbinding_1_1_binding.html#a3073ea16687a9574446e78a34c176ee1',1,'glbinding::Binding']]],
   ['elementpointerati',['ElementPointerATI',['../classglbinding_1_1_binding.html#a0e854dd351887ecf961700e31667cd79',1,'glbinding::Binding']]],
   ['enable',['Enable',['../classglbinding_1_1_binding.html#a69446c06cbc222caf06e5325c618b09a',1,'glbinding::Binding']]],
